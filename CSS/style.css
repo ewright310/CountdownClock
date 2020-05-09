@@ -1,0 +1,106 @@
+body {
+    background-color: #17c3b2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #5d576b;
+}
+
+#mainBox {
+    width: 1200px;
+    border: solid 4px #8f9491;
+    background-color: #fef9ef;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #fe6d73;
+    border-bottom: solid 4px #8f9491;
+    height: 160px;
+    margin-top: 0px;
+    position: relative;
+    top: 0px;
+}
+
+@font-face {
+    font-family: "Title-font";
+    src: url(KillDill.otf);
+}
+
+header h1 {
+    padding-top: 5px;
+    position: absolute;
+    margin-left: 400px;
+    width: 400px;
+    text-align: center;
+    font-size: 80px;
+    font-family: Title-font;
+}
+
+#clockSection {
+    padding-left: 10px;
+
+}
+
+#clockDisplay {
+    font-size: 80px;
+    border: 4px solid #fe6d73;
+    color: #17c3b2;
+    width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.date {
+    font-size: 30px;
+    color: #8f9491;
+    text-align: center;
+    font-weight: bold;
+}
+
+#dateInput {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.timeInput {
+    width: 25px;
+}
+
+
+#submitDate {
+    background-color: #fe6d73;
+    color: #5d576b;
+    font-weight: bold;
+
+}
+
+#submitDate:hover {
+    background-color: #17c3b2;
+    color: #fef9ef;
+}
+
+#totalTime {
+    text-align: center;
+    font-size: 40px;
+}
+
+.or {
+    font-size: 13px;
+    margin: 5px;
+}
+
+.outputText {
+    color: #fe6d73;
+}
+
+#eventNameOut {
+    color: aqua;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+#outputSection p {
+    margin: 5px;
+}

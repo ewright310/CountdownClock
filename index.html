@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>Coundown Clock</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" >
+    </head>
+    <body>
+        <div id="mainBox">
+            <header>
+                <h1>Countdown Clock</h1>
+            </header>
+            <section id="clockSection">
+                <h2>The current time and date is:</h2>
+                <div id="clockDisplay">
+                    <div id="clock"></div>
+                    <div id="dateDisplay" class="date"></div>
+                </div> 
+            </section>
+            <section id="dateInput">
+                <p>Enter the name of the event you would like to countdown to, as well as the date and time of the event, in 12-hour clock format:</p>
+                    
+                <form id="userInput" action="#">
+                    <label>Event Name:</label>
+                    <input type="text" id="eventName">
+                    <label>Date:</label>
+                    <input type="date" id="userDate">
+                    <label>Time:</label>
+                    <input id="userTime" type="time">
+                    <input type="Submit" id="submitButton" value="Submit">
+                </form>    
+                <p style="margin-bottom: 5px">If no time is selected it will default to midnight on your selected date.</p>
+            </section>
+            <section id="outputSection" style="display : none;">
+                <div id="totalTime">
+                    <p>At <span id="currentTime"></span> on <span id="currentDate"></span> <span id="pastPresent">it is</span></p>
+                    <p id="dayTimer" class="outputText"></p>
+                    <p class="or">or</p>
+                    <p id="hourTimer" class="outputText"></p>
+                    <p class="or">or</p>
+                    <p id="minuteTimer" class="outputText"></p>
+                    <p class="or">or</p>
+                    <p id="secondTimer" class="outputText"></p>
+                    <p id="untilSince">until</p>
+                    <p id="eventNameOut"></p>
+                </div>
+            </section>
+        </div>
+        <script src="js/clock.js"></script>
+        <script src="js/countdown.js"></script>
+    </body>
+</html>
