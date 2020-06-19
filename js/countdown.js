@@ -24,6 +24,18 @@ function getPastDifference() {
 }
 
 function getTimes() {
+    if(Date.parse(getUserDate()) < Date.parse(new Date())) {
+        document.getElementById('pastPresent').innerHTML = "it has been";
+        document.getElementById('untilSince').innerHTML = "since";
+        console.log('past')
+    }
+
+    if(Date.parse(getUserDate()) > Date.parse(new Date())) {
+        document.getElementById('pastPresent').innerHTML = "it is";
+        document.getElementById('untilSince').innerHTML = "until";
+        console.log('future')
+    }
+
     if(Date.parse(getUserDate())-Date.parse(new Date())<0) {
         timeDifference = getPastDifference();
     } else {
@@ -39,14 +51,7 @@ function getTimes() {
     document.getElementById('eventNameOut').innerText = (document.getElementById('eventName').value + "!");
 
     setTimeout(getTimes,100);
-
 }
-
-function pastOrPresent() {
-    if(Date.parse(getUserDate())-Date.parse(new Date())<0) {
-        document.getElementById('pastPresent').innerText = "it has been";
-        document.getElementById('untilSince').innerText = "since";
-    }}
 
 
 document.getElementById('submitButton').onclick = function() {
@@ -55,5 +60,4 @@ document.getElementById('submitButton').onclick = function() {
     } else {
     document.getElementById("outputSection").style.display="block";
     getTimes();
-    pastOrPresent();
 }}
