@@ -6,8 +6,7 @@ function getUserDate() {
     let userDate = new Date();
     userDate = document.getElementById("userDate").value;
     let userTime = document.getElementById("userTime").value;
-    userDate = userDate + userTime;
-    Date.parse(userDate);
+    userDate = userDate + " " + userTime;
     return userDate;
 }
 
@@ -50,7 +49,8 @@ function getTimes() {
     
     document.getElementById('eventNameOut').innerText = (document.getElementById('eventName').value + "!");
 
-    setTimeout(getTimes,100);
+    setTimeout(getTimes, 100);
+
 }
 
 
