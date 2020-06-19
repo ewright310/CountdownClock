@@ -2,10 +2,12 @@
 Countdown.js
 */
 
- function getUserDate() {
+function getUserDate() {
     let userDate = new Date();
     userDate = document.getElementById("userDate").value;
-    userDate = userDate + document.getElementById("userTime").value;
+    let userTime = document.getElementById("userTime").value;
+    userDate = userDate + userTime;
+    Date.parse(userDate);
     return userDate;
 }
 
@@ -27,13 +29,11 @@ function getTimes() {
     if(Date.parse(getUserDate()) < Date.parse(new Date())) {
         document.getElementById('pastPresent').innerHTML = "it has been";
         document.getElementById('untilSince').innerHTML = "since";
-        console.log('past')
     }
 
     if(Date.parse(getUserDate()) > Date.parse(new Date())) {
         document.getElementById('pastPresent').innerHTML = "it is";
         document.getElementById('untilSince').innerHTML = "until";
-        console.log('future')
     }
 
     if(Date.parse(getUserDate())-Date.parse(new Date())<0) {
@@ -61,3 +61,10 @@ document.getElementById('submitButton').onclick = function() {
     document.getElementById("outputSection").style.display="block";
     getTimes();
 }}
+
+document.getElementById('clearButton').onclick = function() {
+    document.getElementById("userDate").value = "";
+    document.getElementById("userTime").value = "";
+    document.getElementById('eventName').value = "";
+    document.getElementById("outputSection").style.display="none";
+}
